@@ -22,4 +22,18 @@ misterioso = [1,1,1]
 # baseado nos dados (tabela de classificação) que classifique o misterioso
 # a partir de sua experiência anterior.
 
+# Multinomial é o algoritmo que usaremos para treinar nosso modelo
 
+from sklearn.naive_bayes import MultinomialNB
+
+#criação de um modelo para treinar os dados e marcações
+modelo = MultinomialNB()
+
+#necessitamos de algo para treinar o modelo e associar dados a marcacoes no estilo
+#modelo.treinar(dados,marcacao). Para isso usamos o método fit
+modelo.fit(dados, marcacao)
+
+#após o treinamento, devemos prever (predict) se o misterioso é cachorro ou porco.
+print(modelo.predict([misterioso]))
+
+#Resultado: Misterioso é um cachorro.
