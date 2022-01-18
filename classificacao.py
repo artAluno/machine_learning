@@ -37,3 +37,6 @@ modelo.fit(dados, marcacao)
 print(modelo.predict([misterioso]))
 
 #Resultado: Misterioso é um cachorro.
+
+#Agora vamos inserir mais animais misteriosos e tentar realizar as novas predições baseados
+#nas experiências passadas
